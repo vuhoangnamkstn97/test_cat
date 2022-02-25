@@ -11,7 +11,7 @@
   "MAX_SUPPLY": 100,
   "WEI_COST": 1000000000000000000,
   "DISPLAY_COST": 1,
-  "GAS_LIMIT": 30000000,
+  "GAS_LIMIT": 3000000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/test-cat-v2",
   "SHOW_BACKGROUND": true
