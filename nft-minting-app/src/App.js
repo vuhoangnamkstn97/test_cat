@@ -117,7 +117,7 @@ function App() {
     GAS_LIMIT: 0,
     MARKETPLACE: "",
     MARKETPLACE_LINK: "",
-    SHOW_BACKGROUND: false,
+    SHOW_BACKGROUND: true,
   });
 
   const claimNFTs = () => {
@@ -225,12 +225,12 @@ function App() {
             <s.TextTitle
               style={{
                 textAlign: "center",
-                fontSize: 50,
-                fontWeight: "bold",
+                fontSize: 30,
+                // fontWeight: "bold",
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+            PolygonPunks remaining  {CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY} 
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -401,7 +401,7 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               alt={"example"}
-              src={"/config/images/example.gif"}
+              src={"/config/images/example_right.gif"}
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>
