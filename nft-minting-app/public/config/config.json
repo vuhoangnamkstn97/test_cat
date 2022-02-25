@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x9D5e85A7D2538D8f7A187247451DF8dd99C04550",
-  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0x9D5e85A7D2538D8f7A187247451DF8dd99C04550",
+  "CONTRACT_ADDRESS": "0x861D198E94b8b303EA59Faf3bDcb1bAFFcD9D166",
+  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0x861D198E94b8b303EA59Faf3bDcb1bAFFcD9D166",
   "NETWORK": {
-    "NAME": "Matic Mumbai",
+    "NAME": "Matic",
     "SYMBOL": "Matic",
-    "ID": 80001
+    "ID": 137
   },
   "NFT_NAME": "test cat kingdom",
   "SYMBOL": "tck",
