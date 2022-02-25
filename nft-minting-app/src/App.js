@@ -120,8 +120,8 @@ function App() {
     SHOW_BACKGROUND: true,
   });
 
-  const claimNFTs = () => {
-    let cost = CONFIG.WEI_COST;
+  const claimNFTs = () => {    
+    let cost = data.totalSupply < CONFIG.UPDATE_LIMIT ? CONFIG.WEI_COST : CONFIG.WEI_COST_UPDATE;
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
@@ -291,7 +291,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
+                  1 {CONFIG.SYMBOL} costs {data.totalSupply < CONFIG.UPDATE_LIMIT ? CONFIG.DISPLAY_COST : CONFIG.DISPLAY_COST_UPDATE}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
