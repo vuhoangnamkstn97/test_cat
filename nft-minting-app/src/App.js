@@ -120,7 +120,7 @@ function App() {
     SHOW_BACKGROUND: true,
   });
 
-  const claimNFTs = () => {    
+  const claimNFTs = () => {
     let cost = data.totalSupply < CONFIG.UPDATE_LIMIT ? CONFIG.WEI_COST : CONFIG.WEI_COST_UPDATE;
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
@@ -162,8 +162,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 50) {
-      newMintAmount = 50;
+    if (newMintAmount > CONFIG.MAX_MINT_AMOUNT) {
+      newMintAmount = CONFIG.MAX_MINT_AMOUNT;
     }
     setMintAmount(newMintAmount);
   };
@@ -218,7 +218,7 @@ function App() {
               backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px dashed var(--secondary)",
+              border: "4px dashed #ffffff",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
@@ -230,7 +230,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-            🐱 remain
+              🐱 remain
             </s.TextTitle>
             <s.TextTitle
               style={{
@@ -240,7 +240,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-            {CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY} 
+              {CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -248,7 +248,10 @@ function App() {
                 color: "var(--primary-text)",
               }}
             >
-              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+              <StyledLink style={{
+                textAlign: "center",
+                color: "#ffffff",
+              }} target={"_blank"} href={CONFIG.SCAN_LINK}>
                 {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </StyledLink>
             </s.TextDescription>
@@ -270,6 +273,8 @@ function App() {
               <StyledButton
                 style={{
                   margin: "5px",
+                  backgroundColor: "#ebc908",
+                  color: "#000000"
                 }}
                 onClick={(e) => {
                   window.open(CONFIG.MARKETPLACE_LINK, "_blank");
@@ -312,7 +317,7 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription
                       style={{
@@ -324,6 +329,10 @@ function App() {
                     </s.TextDescription>
                     <s.SpacerSmall />
                     <StyledButton
+                      style={{
+                        backgroundColor: "#ebc908",
+                        color: "#000000"
+                      }}
                       onClick={(e) => {
                         e.preventDefault();
                         dispatch(connect());
@@ -392,6 +401,10 @@ function App() {
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledButton
                         disabled={claimingNft ? 1 : 0}
+                        style={{
+                          backgroundColor: "#ebc908",
+                          color: "#000000"
+                        }}
                         onClick={(e) => {
                           e.preventDefault();
                           claimNFTs();
