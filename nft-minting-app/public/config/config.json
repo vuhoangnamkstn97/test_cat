@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0x44719028b5e89d962c1b829e7bbd52f727462844",
-  "SCAN_LINK": "https://polygonscan.com/address/0x44719028b5e89d962c1b829e7bbd52f727462844",
+  "CONTRACT_ADDRESS": "0xa47f8df7b3bb61cb3a7e58808f47018addbca6e9",
+  "SCAN_LINK": "https://polygonscan.com/address/0xa47f8df7b3bb61cb3a7e58808f47018addbca6e9",
   "NETWORK": {
     "NAME": "Matic",
     "SYMBOL": "Matic",
@@ -17,6 +17,6 @@
   "GAS_LIMIT": 285000,
   "MAX_MINT_AMOUNT": 20,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/test-cat-v2",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/cool-cat-punks",
   "SHOW_BACKGROUND": false
 }
