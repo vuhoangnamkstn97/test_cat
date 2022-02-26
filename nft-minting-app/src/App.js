@@ -230,7 +230,17 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-            PolygonPunks remaining  {CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY} 
+            🐱 remain
+            </s.TextTitle>
+            <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                // fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+            {CONFIG.MAX_SUPPLY - data.totalSupply} / {CONFIG.MAX_SUPPLY} 
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -247,7 +257,7 @@ function App() {
                 textAlign: "center",
               }}
             >
-              <StyledButton
+              {/* <StyledButton
                 onClick={(e) => {
                   window.open("/config/roadmap.pdf", "_blank");
                 }}
@@ -256,7 +266,7 @@ function App() {
                 }}
               >
                 Roadmap
-              </StyledButton>
+              </StyledButton> */}
               <StyledButton
                 style={{
                   margin: "5px",
@@ -291,7 +301,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} costs {data.totalSupply < CONFIG.UPDATE_LIMIT ? CONFIG.DISPLAY_COST : CONFIG.DISPLAY_COST_UPDATE}{" "}
+                  1 {CONFIG.SYMBOL} = {data.totalSupply < CONFIG.UPDATE_LIMIT ? CONFIG.DISPLAY_COST : CONFIG.DISPLAY_COST_UPDATE}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
@@ -407,7 +417,7 @@ function App() {
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
-        <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
+        <s.Container jc={"center"} ai={"center"} style={{ width: "80%" }}>
           <s.TextDescription
             style={{
               textAlign: "center",

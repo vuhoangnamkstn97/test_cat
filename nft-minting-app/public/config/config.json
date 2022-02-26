@@ -6,16 +6,16 @@
     "SYMBOL": "Matic",
     "ID": 137
   },
-  "NFT_NAME": "test cat kingdom",
-  "SYMBOL": "tck",
+  "NFT_NAME": "CoolCatPunks",
+  "SYMBOL": "🐱",
   "MAX_SUPPLY": 10000,
   "WEI_COST": 1000000000000000000,
   "DISPLAY_COST": 1,
   "WEI_COST_UPDATE": 2000000000000000000,
   "DISPLAY_COST_UPDATE": 2,
   "UPDATE_LIMIT": 5,
-  "GAS_LIMIT": 3000000,
+  "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/test-cat-v2",
-  "SHOW_BACKGROUND": true
+  "SHOW_BACKGROUND": false
 }
