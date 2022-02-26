@@ -17,6 +17,6 @@
   "GAS_LIMIT": 285000,
   "MAX_MINT_AMOUNT": 20,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/cool-cat-punks",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/cool-cat-punks/",
   "SHOW_BACKGROUND": false
 }
